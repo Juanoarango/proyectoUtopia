@@ -1,0 +1,232 @@
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.lightbox-overlay.lightbox-open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lightbox-wrap {
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+}
+
+.lightbox-content {
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox-title-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    text-align: center;
+}
+
+.lightbox-nav {
+    display: none;
+}
+
+.lightbox-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.lightbox-image {
+    text-align: center;
+}
+
+.lightbox-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+.lightbox-content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox-inline,
+.lightbox-ajax {
+    max-height: 100%;
+    overflow: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.lightbox-error {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-shadow: 0 1px 1px #000;
+}
+
+.lightbox-error p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* Effects
+ **********************************************/
+
+.lightbox-notouch .lightbox-effect-fade,
+.lightbox-notouch .lightbox-effect-fadeScale,
+.lightbox-notouch .lightbox-effect-slideLeft,
+.lightbox-notouch .lightbox-effect-slideRight,
+.lightbox-notouch .lightbox-effect-slideUp,
+.lightbox-notouch .lightbox-effect-slideDown,
+.lightbox-notouch .lightbox-effect-fall {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* fadeScale 
+**********************************************/
+
+.lightbox-effect-fadeScale .lightbox-wrap {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+}
+
+.lightbox-effect-fadeScale.lightbox-open .lightbox-wrap {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+
+/* slideLeft / slideRight / slideUp / slideDown
+**********************************************/
+
+.lightbox-effect-slideLeft .lightbox-wrap,
+.lightbox-effect-slideRight .lightbox-wrap,
+.lightbox-effect-slideUp .lightbox-wrap,
+.lightbox-effect-slideDown .lightbox-wrap {
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    -moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    -ms-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    -o-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+.lightbox-effect-slideLeft .lightbox-wrap {
+    -webkit-transform: translateX(-10%);
+    -moz-transform: translateX(-10%);
+    -ms-transform: translateX(-10%);
+    transform: translateX(-10%);
+}
+
+.lightbox-effect-slideRight .lightbox-wrap {
+    -webkit-transform: translateX(10%);
+    -moz-transform: translateX(10%);
+    -ms-transform: translateX(10%);
+    transform: translateX(10%);
+}
+
+.lightbox-effect-slideLeft.lightbox-open .lightbox-wrap,
+.lightbox-effect-slideRight.lightbox-open .lightbox-wrap {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.lightbox-effect-slideDown .lightbox-wrap {
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    transform: translateY(-10%);
+}
+
+.lightbox-effect-slideUp .lightbox-wrap {
+    -webkit-transform: translateY(10%);
+    -moz-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    transform: translateY(10%);
+}
+
+.lightbox-effect-slideUp.lightbox-open .lightbox-wrap,
+.lightbox-effect-slideDown.lightbox-open .lightbox-wrap {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+
+/* fall 
+**********************************************/
+
+.lightbox-body-effect-fall .lightbox-effect-fall {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.lightbox-effect-fall .lightbox-wrap {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    -webkit-transform: translateZ(300px);
+    -moz-transform: translateZ(300px);
+    -ms-transform: translateZ(300px);
+    transform: translateZ(300px);
+}
+
+.lightbox-effect-fall.lightbox-open .lightbox-wrap {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
