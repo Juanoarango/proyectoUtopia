@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Utopía - Home</title>
+    <title>Utopía - Perfilando</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +22,7 @@
 <body>
 
     <!-- menu navegacion -->
+
     <div class="container">
         <div class="navbar navbar-default navbar-static-top" role="navigation">
             <div class="navbar-header">
@@ -43,99 +44,85 @@
         </div>
     </div>
 
-    <!-- home Bienvenido -->
-    <div id="home">
+    <!-- Diagnóstico Empresa header section -->
+    <div id="diagnosticoEmpresa-header">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 col-sm-3"></div>
-                <div class="col-md-7 col-sm-9">
-                    <h3>Bienvenido a Utopía</h3>
-                    <h1>Estudio de Marketing</h1>
-                </div>
+                <div class="col-md-12 col-sm-12"></div>
             </div>
         </div>
     </div>
 
-    <!-- seccion hacemos -->
-    <div class="divider">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="divider-wrapper divider-one">
-                        <i class="fa fa-go"></i>
-                        <h2>Perfila tu Empresa</h2>
-                        <p>Queremos Conocerte Mejor, Ingresa Aquí para Diagnosticar Tus Fortalezas y Analizar Tus Necesidades.</p>                        
-                    </div>                    
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="divider-wrapper divider-two">
-                        <i class="fa fa-mobile"></i>
-                        <h2>Encontrar tu Nicho</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="divider-wrapper divider-three">
-                        <i class="fa fa-life-ring"></i>
-                        <h2>Tienda de Productos</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- seccion nosotros -->
-    <div id="nosotros">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <img src="images/nosotros-img.jpg" class="img-responsive" alt="nosotros img">
-                </div>
-                <div class="col-md-6 col-sm-12 nosotros-des">
-                    <h2>Adaptándonos a la realidad</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-                    <a href="nosotros.html" class="btn btn-default">Seguir Leyendo</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- seccion portafolio -->
-    <div id="portafolio">
+    <!-- contacto section -->
+    <div id="contacto">
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-2 col-md-8 col-sm-12">
-                    <h2>Últimos Proyectos Realizados</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+                    <h2>Conozcamos Tu Empresa</h2>
+                    <p>Para Nosotors es Importante Conocer Tus Avances en Marketing, Dilignecia el Siguiente Formulario para Evaluar Tus Necesidades. Se Honesto en las Respuestas</p>                    
                 </div>
-            </div>
+                <div class="col-md-8 col-sm-8 mt30">
+                    <form action="#" method="post" role="form">
+                        <div class="col-md-6 col-sm-6">
+                            <label for="nitEmpresa">NIT</label>
+                            <input name="nitEmpresa" type="text" class="form-control" id="nitEmpresa">                            
+                            
+                            <label for="nameEmpresa">Nombre</label>
+                            <input name="nameEmpresa" type="text" class="form-control" id="nameEmpresa">
+                            
+                            <label for="nameContacto">Nombre Contacto</label>
+                            <input name="nameContacto" type="text" class="form-control" id="nameContacto">
+                            
+                            <label for="numeroCelular">Celular</label>
+                            <input name="numeroCelular" type="number" maxlength="10" class="form-control" id="numeroCelular">
 
-            <div class="row mt30">
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <a href="images/portafolio-img1.jpg" data-lightbox-galeria="portafolio-galeria"><img src="images/portafolio-img1.jpg" alt="portafolio img"></a>
+                            <label for="emailEmpresa">E-Mail</label>
+                            <input name="emailEmpresa" type="email" class="form-control" id="emailEmpresa">
+
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <p><label for="tieneWeb">Tienes Página WEB?</label></p>
+                            
+                            <label for="webSi">SI</label>
+                            <input name="webSi" type="radio" class="form-control" id="webSi">
+                            <label for="webNo">NO</label>
+                            <input name="webNo" type="radio" class="form-control" id="webNo">
+                            
+                            <label for="nameWeb">Página WEB</label>
+                            <input name="nameWeb" type="text" class="form-control" id="nameWeb">
+
+                            <p><label for="tusRedesSociales">Tus Redes Sociales</label></p>
+                            
+                            <label for="tusRedesFacebook">Facebook</label>
+                            <a href="#" class="fa fa-facebook"></a>
+                            <input name="tusRedesFacebook" type="checkbox" class="form-control" id="tusRedesFacebook">
+
+                            <label for="tusRedesTwitter">Twitter</label>
+                            <a href="#" class="fa-twitter"></a>
+                            <input name="tusRedesTwitter" type="checkbox" class="form-control" id="tusRedesTwitter">
+
+                            <label for="tusRedesLinkedin">Linkedin</label>
+                            <a href="#" class="fa-linkedin"></a>
+                            <input name="tusRedesLinkedin" type="checkbox" class="form-control" id="tusRedesLinkedin">
+
+                            <label for="tusRedesOtras">Otra, Cual?</label>
+                            <input name="nameWeb" type="text" class="form-control" id="nameWeb">                         
+
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <button type="submit" name="submit" class="btn btn-default">ENVIAR</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <a href="images/portafolio-img2.jpg" data-lightbox-galeria="portafolio-galeria"><img src="images/portafolio-img2.jpg" alt="portafolio img"></a>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <a href="images/portafolio-img3.jpg" data-lightbox-galeria="portafolio-galeria"><img src="images/portafolio-img3.jpg" alt="portafolio img"></a>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="images/portafolio-img4.jpg" data-lightbox-galeria="portafolio-galeria"><img src="images/portafolio-img4.jpg" alt="portafolio img"></a>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="images/portafolio-img5.jpg" data-lightbox-galeria="portafolio-galeria"><img src="images/portafolio-img5.jpg" alt="portafolio img"></a>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <a href="images/portafolio-img6.jpg" data-lightbox-galeria="portafolio-galeria"><img src="images/portafolio-img6.jpg" alt="portafolio img"></a>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <a href="images/portafolio-img7.jpg" data-lightbox-galeria="portafolio-galeria"><img src="images/portafolio-img7.jpg" alt="portafolio img"></a>
-                </div>
-                <div class="col-md-12 col-sm-12">
-                    <a rel="nofollow" href="" class="btn btn-default">Ver más</a>
+                <div class="col-md-4 col-sm-4 address">
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@utopia.com</p>
+                    </div>
+                    <div>
+                        <h3>Teléfonos</h3>
+                        <p>312-232-41-45 | 300-356-46-85</p>
+                    </div>
                 </div>
             </div>
         </div>
