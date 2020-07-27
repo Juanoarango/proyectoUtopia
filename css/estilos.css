@@ -497,3 +497,13 @@ footer a:hover {
     background: #d54ab6;
     color: #fff;
 }
+
+/* seccion Diagnóstico Empresa */
+
+#diagnosticoEmpresa-header {
+    background: url('../images/DiagnosticoEmpresa.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    padding-top: 160px;
+}
