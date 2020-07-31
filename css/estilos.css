@@ -93,6 +93,23 @@ img {
         font-size: 2em !important;
         margin: 2em 0 -2em 0 !important;
     }
+    #nosotros-header {
+        background-size: 219% !important;
+    }
+    #portafolio-header {
+        background-size: 240% !important;
+    }
+    #tiendita-header {
+        background-size: 200% !important;
+    }
+    #contacto-header {
+        background-size: 172% !important;
+        background-position-x: -165px !important;
+        background-position-y: -90px !important;
+    }
+    .navbar-default {
+        padding-right: 0px !important;
+    }
 }
 
 
