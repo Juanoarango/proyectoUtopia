@@ -387,6 +387,22 @@ img {
 
 #contacto input {
     height: 53px;
+    position: relative;
+    top: -4px;
+    margin-right: 2px;
+}
+
+.inputsForm {
+    margin-top: -1.5em;
+    margin-bottom: 5em;
+}
+
+.column_3 .inputsForm {
+    margin-bottom: 1em;
+}
+
+.column_2 {
+    padding-top: 1.5em;
 }
 
 .form-control::-moz-placeholder {
@@ -497,6 +513,7 @@ footer a:hover {
     background: #d54ab6;
     color: #fff;
 }
+
 
 /* seccion Diagnóstico Empresa */
 

@@ -35,10 +35,10 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="nosotros.html">NOSOTROS</a></li>
                     <li><a href="portafolio.html">PORTAFOLIO</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li><a href="contacto.html" class="active">CONTACTO</a></li>
                 </ul>
             </div>
         </div>
@@ -57,111 +57,113 @@
     <div id="contacto">
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                <div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
                     <h2>Conozcamos Tu Empresa</h2>
-                    <p>Para Nosotors es Importante Conocer Tus Avances en Marketing, Dilignecia el Siguiente Formulario para Evaluar Tus Necesidades. Se Honesto en las Respuestas</p>                    
+                    <p>Para nosotros es importante conocer tus avances en Marketing, dilignecia el siguiente formulario para evaluar tus necesidades. Se honesto en las respuestas</p>
                 </div>
-                <div class="col-md-8 col-sm-8 mt30">
-                    <form action="#" method="post" role="form">
-                        <div class="col-md-6 col-sm-6">
-                            <label for="nitEmpresa">NIT</label>
-                            <input name="nitEmpresa" type="text" class="form-control" id="nitEmpresa">                            
-                            
-                            <label for="nameEmpresa">Nombre</label>
-                            <input name="nameEmpresa" type="text" class="form-control" id="nameEmpresa">
-                            
-                            <label for="nameContacto">Nombre Contacto</label>
-                            <input name="nameContacto" type="text" class="form-control" id="nameContacto">
-                            
-                            <label for="numeroCelular">Celular</label>
-                            <input name="numeroCelular" type="number" maxlength="10" class="form-control" id="numeroCelular">
+            </div>
 
-                            <label for="emailEmpresa">E-Mail</label>
-                            <input name="emailEmpresa" type="email" class="form-control" id="emailEmpresa">
+            <div class="row" style="margin-top: 2em;">
+                <form action="#" method="post" role="form">
+                    <div class="col-lg-4 column_1">
+                        <label for="nitEmpresa">NIT</label>
+                        <input name="nitEmpresa" type="text" class="form-control" id="nitEmpresa">
 
-                            
-                            <p>Tienes Página WEB?</p>
-                                                      
-                            <label for="web">SI</label>
-                            <input name="web" type="radio" id="web">
+                        <label for="nameEmpresa">Nombre de la Empresa</label>
+                        <input name="nameEmpresa" type="text" class="form-control" id="nameEmpresa">
+
+                        <label for="nameContacto">Nombre Contacto</label>
+                        <input name="nameContacto" type="text" class="form-control" id="nameContacto">
+
+                        <label for="numeroCelular">Celular Contacto</label>
+                        <input name="numeroCelular" type="number" maxlength="10" class="form-control" id="numeroCelular">
+
+                        <label for="emailEmpresa">E-Mail Contacto</label>
+                        <input name="emailEmpresa" type="email" class="form-control" id="emailEmpresa">
+                    </div>
+                    <div class="col-lg-4 column_2">
+                        <p><label for="paginaWeb">Tiene una página WEB?</label> </p>
+                        <div class="inputsForm">
+                            <input class="checkbox-inline" name="web" type="radio" id="web">
+                            <label for="web">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="checkbox-inline" name="web" type="radio" id="web">
                             <label for="web">NO</label>
-                            <input name="web" type="radio" id="web">
-                            
-                            <p><label for="nameWeb"></label>Página WEB</label></p>
+                            <p><label for="nameWeb">Si tienes ¿cual es la URL?</label></p>
                             <input name="nameWeb" type="text" class="form-control" id="nameWeb">
-
-                            <p><label for="tusRedesSociales">Tus Redes Sociales</label></p>
-                            
-                            <label for="tusRedesFacebook">Facebook</label>
+                        </div>
+                        <p><label for="tusRedesSociales">Tus Redes Sociales</label></p>
+                        <div class="inputsForm">
+                            <input name="tusRedesFacebook" type="checkbox" id="tusRedesFacebook" class="checkbox-inline">
                             <a href="#" class="fa fa-facebook"></a>
-                            <input name="tusRedesFacebook" type="checkbox" id="tusRedesFacebook">
-
-                            <label for="tusRedesTwitter">Twitter</label>
-                            <a href="#" class="fa-twitter"></a>
-                            <input name="tusRedesTwitter" type="checkbox" id="tusRedesTwitter">
-
-                            <label for="tusRedesLinkedin">Linkedin</label>
-                            <a href="#" class="fa-linkedin"></a>
-                            <input name="tusRedesLinkedin" type="checkbox" id="tusRedesLinkedin">
-
-                            <label for="tusRedesInstagram">Instagram</label>
-                            <a href="#" class="fa-Instagram"></a>
-                            <input name="tusRedesInstagram" type="checkbox" id="tusRedesInstagram">
-
-                            <label for="tusRedesOtras">Otra, Cual?</label>
+                            <label for="tusRedesFacebook">Facebook</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="tusRedesTwitter" type="checkbox" id="tusRedesTwitter" class="checkbox-inline">
+                            <a href="#" class="fa fa-twitter"></a>
+                            <label for="tusRedesTwitter">Twitter</label>&nbsp;&nbsp;
+                            <div>
+                                <input name="tusRedesLinkedin" type="checkbox" id="tusRedesLinkedin" class="checkbox-inline">
+                                <a href="#" class="fa fa-linkedin"></a>
+                                <label for="tusRedesLinkedin">Linkedin</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input name="tusRedesInstagram" type="checkbox" id="tusRedesInstagram" class="checkbox-inline">
+                                <a href="#" class="fa fa-instagram"></a>
+                                <label for="tusRedesInstagram">Instagram</label>
+                            </div>
+                            <p><label for="tusRedesOtras">Otra, Cual?</label></p>
                             <input name="nameWeb" type="text" class="form-control" id="nameWeb">
-                            
-                            <label for="communityManager">Tienes Community Manager para Administrar tus Redes?</label>
+                        </div>
+                    </div>
 
-                            <label for="communitySi">SI</label>
-                            <input name="communitySi" type="radio" id="communitySi">
+                    <div class="col-lg-4 column_3">
+                        <p><label for="communityManager">Tienes Community Manager para Administrar tus Redes?</label></p>
+                        <div class="inputsForm">
+                            <input class="checkbox-inline" name="communitySi" type="radio" id="communitySi">
+                            <label for="communitySi">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="checkbox-inline" name="communityNo" type="radio" id="communityNo">
                             <label for="communityNo">NO</label>
-                            <input name="communityNo" type="radio" id="communityNo">
-
-
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <p><label for="usasPosicionador">Usas / Pagas algún posicionador para tu Sitio WEB?</label></p>
-                            
-                            <label for="usasPosicionadorSI">SI</label>
-                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI">
+                        <p><label for="usasPosicionador">Usas / Pagas algún posicionador para tu Sitio WEB?</label></p>
+                        <div class="inputsForm">
+                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI" class="checkbox-inline">
+                            <label for="usasPosicionadorSI">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO" class="checkbox-inline">
                             <label for="usasPosicionadorNO">NO</label>
-                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO">
-
-                            <p>De las Siguientes Opciones califica de 1 a 5, Donde 1 revela Insatisfacción y 5 Satisfacción Total</p>
-                            
-                            <p><label for="ingresoMarketing">Tu Emrpesa Gana Dinero Gracias al Marketing?</label></p>
-                            <label for="usasPosicionadorSI">1</label>
-                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI">
-                            <label for="usasPosicionadorNO">2</label>
-                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO">
-                            <label for="usasPosicionadorSI">3</label>
-                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI">
-                            <label for="usasPosicionadorNO">4</label>
-                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO">
-                            <label for="usasPosicionadorNO">5</label>
-                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO">
-
-                            <p><label for="ingresoMarketing">Tienes Datos Estadísticos de las Visitas a Tu Página o lo que Buscan tus Visitantes?</label></p>
-                            <label for="usasPosicionadorSI">1</label>
-                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI">
-                            <label for="usasPosicionadorNO">2</label>
-                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO">
-                            <label for="usasPosicionadorSI">3</label>
-                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI">
-                            <label for="usasPosicionadorNO">4</label>
-                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO">
-                            <label for="usasPosicionadorNO">5</label>
-                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO">
-
-
                         </div>
-                        <div class="col-md-6 col-sm-6">
+                        <p style="color: #337ab7;">De las Siguientes Opciones califica de 1 a 5, Donde 1 revela Insatisfacción y 5 Satisfacción Total</p>
+                        <p><label for="ingresoMarketing">Tu Emrpesa Gana Dinero Gracias al Marketing?</label></p>
+                        <div class="inputsForm">
+                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI" class="checkbox-inline">
+                            <label for="usasPosicionadorSI">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO" class="checkbox-inline">
+                            <label for="usasPosicionadorNO">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI" class="checkbox-inline">
+                            <label for="usasPosicionadorSI">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO" class="checkbox-inline">
+                            <label for="usasPosicionadorNO">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO" class="checkbox-inline">
+                            <label for="usasPosicionadorNO">5</label>
+                        </div>
+                        <p><label for="ingresoMarketing">Tienes Datos Estadísticos de las Visitas a Tu Página o lo que Buscan tus Visitantes?</label></p>
+                        <div class="inputsForm">
+                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI" class="checkbox-inline">
+                            <label for="usasPosicionadorSI">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO" class="checkbox-inline">
+                            <label for="usasPosicionadorNO">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionadorSI" type="radio" id="usasPosicionadorSI" class="checkbox-inline">
+                            <label for="usasPosicionadorSI">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO" class="checkbox-inline">
+                            <label for="usasPosicionadorNO">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionadorNO" type="radio" id="usasPosicionadorNO" class="checkbox-inline">
+                            <label for="usasPosicionadorNO">5</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
                             <button type="submit" name="submit" class="btn btn-default">ENVIAR</button>
                         </div>
-                    </form>
-                </div>
-                <div class="col-md-4 col-sm-4 address">
+                    </div>
+            </div>
+            </form>
+        </div>
+        <!-- <div class="col-md-4 col-sm-4 address">
                     <div>
                         <h3>Email</h3>
                         <p>info@utopia.com</p>
@@ -170,10 +172,14 @@
                         <h3>Teléfonos</h3>
                         <p>312-232-41-45 | 300-356-46-85</p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div> -->
     </div>
+    </div>
+    </div>
+
+
+
+
 
     <!-- footer-->
     <footer>
