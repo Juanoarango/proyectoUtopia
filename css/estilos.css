@@ -78,6 +78,23 @@ img {
     }
 }
 
+@media ( max-width: 600px) {
+    #home {
+        background-size: 235% !important;
+        background-position-x: -27px !important;
+        background-position-y: -161px !important;
+        padding-top: 235px !important;
+    }
+    #home h3 {
+        font-size: 3em !important;
+        margin: 2em 0 -1em 0 !important;
+    }
+    #home h1 {
+        font-size: 2em !important;
+        margin: 2em 0 -2em 0 !important;
+    }
+}
+
 
 /* botones */
 
