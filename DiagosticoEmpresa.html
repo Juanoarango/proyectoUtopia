@@ -54,7 +54,7 @@
         </div>
     </div>
 
-    <!-- contacto section -->
+    <!-- Diagnóstico section -->
     <div id="contacto">
         <div class="container">
             <div class="row">
@@ -64,11 +64,11 @@
                 </div>
             </div>
 
-            <div class="row" style="margin-top: 2em;">
-                <form id=diagnostico>
+            <div class="row" style="margin-top: 2em;">                
+                <form name = "diagnostico">   
                     <div class="col-lg-4 column_1">
                         <label for="nitEmpresa">NIT</label>
-                        <input name="nitEmpresa" type="text" class="form-control" id="nitEmpresa">
+                        <input name="nitEmpresa" type="text" class="form-control" id="nitEmpresa">                        
 
                         <label for="nameEmpresa">Nombre de la Empresa</label>
                         <input name="nameEmpresa" type="text" class="form-control" id="nameEmpresa">
@@ -92,7 +92,7 @@
                             <label for="web">NO</label>
 
                             <p><label for="nameWeb">Si tienes ¿cual es la URL?</label></p>
-                            <input name="nameWeb" type="text" class="form-control" id="nameWeb">
+                            <input name="nameWeb" type="text" class="form-control" id="nameWeb" value='validaWeb()'>
                         </div>
                         <p><label for="tusRedesSociales">Tus Redes Sociales</label></p>
                         <div class="inputsForm">
@@ -130,7 +130,7 @@
                             <input name="usasPosicionador" type="radio" id="usasPosicionador" class="checkbox-inline">
                             <label for="usasPosicionador">NO</label>
                         </div>
-                        <p style="color: #337ab7;">De las Siguientes Opciones califica de 1 a 5, Donde 1 revela Insatisfacción y 5 Satisfacción Total</p>
+                        <p style="color: #337ab7; text-align: center;">De las Siguientes Opciones califica de 1 a 5, Donde 1 revela Insatisfacción y 5 Satisfacción Total</p>
                         <p><label for="ingresoMarketing">Tu Emrpesa Gana Dinero Gracias al Marketing?</label></p>
                         <div class="inputsForm">
                             <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
@@ -160,17 +160,41 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <button type="submit" value="save"  class="btn btn-default">ENVIAR</button>
-                            <!-- <input type="submit" value="Submit"> -->
-                            <!-- console.log(document.getElementById('nitEmpresa').Value) -->
-                        </div>
-                    </div>
-                    <div id="resultadoDiagnostico">
+                            <button type="button" name="btnEnviarDiagnostico" value="enviar"  onclick="enviarDiagnostico(), valdiaGanadinero()" class="btn btn-default">ENVIAR</button>
+                        </div>                        
+                    </div>                                
+                </form>
+ 
+                <!-- Formulario Resultado Evaluación de la Emrpesa-->
 
+                <div id="resultadoDiagnostico">
+                    <div class="row" style="margin-top: 2em;">
+                        <form name=resultadoDiagnositco>
+                            <div class="col-lg-4 column_1">
+                                <label for="nitEmpresaResultado">NIT</label>
+                                <input name="nitEmpresaResultado" type="text" class="form-control" id="nitEmpresaResultado">
+        
+                                <label for="nameEmpresaResultado">Nombre de la Empresa</label>
+                                <input name="nameEmpresaResultado" type="text" class="form-control" id="nameEmpresaResultado">
+
+                                <label for="nameContactoResultado">Nombre Contacto</label>
+                                <input name="nameContactoResultado" type="text" class="form-control" id="nameContactoResultado">
+
+                                <label for="numeroCelularResultado">Celular Contacto</label>
+                                <input name="numeroCelularResultado" type="number" maxlength="10" class="form-control" id="numeroCelularResultado">
+
+                                <label for="emailEmpresaResultado">E-Mail Contacto</label>
+                                <input name="emailEmpresaResultado" type="email" class="form-control" id="emailEmpresaResultado">
+                            </div>
+                            <div class="col-lg-4 column_2">
+                                <label for="ganasDineroResultado">Ganas Dinero Gracias al Marketing</label>
+                                <input name="ganasDineroResultado" type="text" class="form-control" id="ganasDineroResultado">    
+                            </div>
+
+                        </form>
                     </div>
+                </div>
             </div>
-            </form>
-        </div>
     </div>
     </div>
     </div>
