@@ -85,14 +85,14 @@
                     <div class="col-lg-4 column_2">
                         <p><label for="paginaWeb">Tienes una página WEB?</label> </p>
                         <div class="inputsForm">
-                            <input class="checkbox-inline" name="web" type="radio" id="web">
-                            <label for="web">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="checkbox-inline" name="web" type="radio" id="webSi">
+                            <label for="webSi">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
 
-                            <input class="checkbox-inline" name="web" type="radio" id="web">
-                            <label for="web">NO</label>
+                            <input class="checkbox-inline" name="web" type="radio" id="webNo" validaWeb()>
+                            <label for="webNo">NO</label>
 
                             <p><label for="nameWeb">Si tienes ¿cual es la URL?</label></p>
-                            <input name="nameWeb" type="text" class="form-control" id="nameWeb" value='validaWeb()'>
+                            <input name="nameWeb" type="text" class="form-control" id="nameWeb">
                         </div>
                         <p><label for="tusRedesSociales">Tus Redes Sociales</label></p>
                         <div class="inputsForm">
@@ -118,49 +118,50 @@
                     <div class="col-lg-4 column_3">
                         <p><label for="communityManager">Tienes Community Manager para Administrar tus Redes?</label></p>
                         <div class="inputsForm">
-                            <input class="checkbox-inline" name="community" type="radio" id="community">
-                            <label for="community">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="checkbox-inline" name="community" type="radio" id="community">
-                            <label for="community">NO</label>
+                            <input class="checkbox-inline" name="community" type="radio" id="communitySi">
+                            <label for="communitySi">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="checkbox-inline" name="community" type="radio" id="communityNo">
+                            <label for="communityNo">NO</label>
                         </div>
                         <p><label for="usasPosicionador">Usas / Pagas algún posicionador para tu Sitio WEB?</label></p>
                         <div class="inputsForm">
-                            <input name="usasPosicionador" type="radio" id="usasPosicionador" class="checkbox-inline">
-                            <label for="usasPosicionador">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="usasPosicionador" type="radio" id="usasPosicionador" class="checkbox-inline">
-                            <label for="usasPosicionador">NO</label>
+                            <input name="usasPosicionador" type="radio" id="usasPosicionadorSi" class="checkbox-inline">
+                            <label for="usasPosicionadorSi">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionador" type="radio" id="usasPosicionadorNo" class="checkbox-inline">
+                            <label for="usasPosicionadorNo">NO</label>
                         </div>
                         <p style="color: #337ab7; text-align: center;">De las Siguientes Opciones califica de 1 a 5, Donde 1 revela Insatisfacción y 5 Satisfacción Total</p>
                         <p><label for="ingresoMarketing">Tu Emrpesa Gana Dinero Gracias al Marketing?</label></p>
                         <div class="inputsForm">
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">5</label>
+                            <input name="ganasDinero" type="radio" id="ganasDineroUno" class="checkbox-inline">
+                            <label for="ganasDineroUno">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="ganasDinero" type="radio" id="ganasDineroDos" class="checkbox-inline">
+                            <label for="ganasDineroDos">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="ganasDinero" type="radio" id="ganasDineroTres" class="checkbox-inline">
+                            <label for="ganasDineroTres">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="ganasDinero" type="radio" id="ganasDineroCuatro" class="checkbox-inline">
+                            <label for="ganasDineroCuatro">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="ganasDinero" type="radio" id="ganasDineroCinco" class="checkbox-inline">
+                            <label for="ganasDineroCinco">5</label>
                         </div>
                         <p><label for="estadisticas">Tienes Datos Estadísticos de las Visitas a Tu Página o lo que Buscan tus Visitantes?</label></p>
                         <div class="inputsForm">
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">5</label>
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasUno" class="checkbox-inline">
+                            <label for="tienesEstadisticasUno">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasDos" class="checkbox-inline">
+                            <label for="tienesEstadisticasDos">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasTres" class="checkbox-inline">
+                            <label for="tienesEstadisticasTres">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasCuatro" class="checkbox-inline">
+                            <label for="tienesEstadisticasCuatro">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasCinco" class="checkbox-inline">
+                            <label for="tienesEstadisticasCinco">5</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <button type="button" name="btnEnviarDiagnostico" value="enviar"  onclick="enviarDiagnostico(), valdiaGanadinero()" class="btn btn-default">ENVIAR</button>
+                            <button type="button" name="btnEnviarDiagnostico" value="enviar" id="btnEnviar" onclick="enviarDiagnostico()" class="btn btn-default">ENVIAR</button>
+                            <!-- onclick="enviarDiagnostico()" -->
                         </div>                        
                     </div>                                
                 </form>
@@ -187,10 +188,34 @@
                                 <input name="emailEmpresaResultado" type="email" class="form-control" id="emailEmpresaResultado">
                             </div>
                             <div class="col-lg-4 column_2">
-                                <label for="ganasDineroResultado">Ganas Dinero Gracias al Marketing</label>
-                                <input name="ganasDineroResultado" type="text" class="form-control" id="ganasDineroResultado">    
-                            </div>
+                                <label for="tienesWebResultado">Página WEB</label>
+                                <input name="tienesWebResultado" type="text" class="form-control" id="tienesWebResultado">
 
+                                <label for="redesSocialesResultado">Redes Sociales</label>
+                                <input name="redesSocialesResultado" type="text" class="form-control" id="redesSocialesResultado">
+
+                                <label for="communityResultado">Community Manager</label>
+                                <input name="communityResultado" type="text" class="form-control" id="communityResultado">
+
+                                <label for="posicionamientoResultado">Posicionamiento</label>
+                                <input name="posicionamientoResultado" type="text" class="form-control" id="posicionamientoResultado">
+                                
+                                <label for="ganasDineroResultado">Ganas Dinero Gracias al Marketing</label>
+                                <input name="ganasDineroResultado" type="text" class="form-control" id="ganasDineroResultado" >    
+
+                                <label for="estadisticaResultado">Estadísticas</label>
+                                <input name="estadisticaResultado" type="text" class="form-control" id="estadisticaResultado" >    
+                            </div>
+                            <!-- Elije Avenger-->
+                            <div class="col-lg-4 column_3">
+                                    <label for="resultadoDiagnostico">Aquí Tienes el Resultado del Diagnóstico</label>
+                                    <input name="resultadoDiagnostico" type="text" class="form-control" id="resultadoDiagnostico">
+    
+                                    <label for="tuAvengers">Tu Personaje</label>
+                                    <input name="tuAvengers" type="text" class="form-control" id="tuAvengers">
+
+                                    
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -268,7 +293,9 @@
     <script src="js/lightbox.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     
+        
 </body>
 
 </html>

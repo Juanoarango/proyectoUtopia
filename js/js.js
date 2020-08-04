@@ -1,4 +1,5 @@
 // Función para enviar el resultado del diagnóstico 
+
 function enviarDiagnostico()
 {
     const nitEmpresa =  document.getElementById('nitEmpresa').value;
@@ -13,69 +14,72 @@ function enviarDiagnostico()
     document.resultadoDiagnositco.numeroCelularResultado.value = numeroCelular;
     document.resultadoDiagnositco.emailEmpresaResultado.value = emailEmpresa;   
 }
-function validaWeb()
+
+// Función para conocer que Radio fué seleccionado - Ganas Dinero
+$(document).ready(function () {
+    $("#btnEnviar").on('click', function () {
+        var $radios = $('input[name="ganasDinero"]'); 
+        $radios.each(function () {
+            if ($(this).prop('checked')) {
+                console.log('El radio seleccionado es: ' + $(this).val());
+                resultadoGanadinero = $(this).val();
+                document.resultadoDiagnositco.ganasDineroResultado.value = resultadoGanadinero;
+            }
+        })
+    })
+});
+function puntajeDiagnostico()
 {
-    const webSiNo = document.getElementById('web');
-    const resultadoWebSiNo = "";
-    const i = 0;
+    const pagWeb = document.getElementById('tienesWebResultado').value;
+    const redesSociales = document.getElementById('redesSocialesResultado').value;
+    const community = document.getElementById('communityResultado').value;
+    const posicionamiento = document.getElementById('posicionamientoResultado').value;
+    const ganasDinero = document.getElementById('ganasDineroResultado').value;
+    const estadistica = document.getElementById('estadisticaResultado').value;
 
-    for(i = 0; i < webSiNo.length; i++)
-    {
-        if(webSiNo[i].checked)
-        {
-            resultadoWebSiNo = webSiNo[i].value;
-            let noTieneWeb = "No Tienes Página WEB";
-            document.diagnostico.nameWeb.value = noTieneWeb;
-        }
-    }
+    const pagWebPuntos = 0;
+    const redesSocialesPuntos = 0;
+    const communityPuntos = 0;
+    const posicionamientoPuntos = 0;
+    const ganasDineroPuntos = 0;
+    const estadisticaPuntos = 0;
+    const totalPuntos = 0;
+
+    if(pagWeb == SI) {pagWebPuntos == 20}
+
+    if(redesSociales == 1) {redesSocialesPuntos = 2}
+    if(redesSociales == 2) {redesSocialesPuntos = 4}
+    if(redesSociales == 3) {redesSocialesPuntos = 6}
+    if(redesSociales == 4) {redesSocialesPuntos = 8}
+    if(redesSociales == 5) {redesSocialesPuntos = 10}
+    
+    if(community == SI) {communityPuntos = 20}
+
+    if(posicionamiento == SI) {posicionamientoPuntos = 10}
+
+    if(ganasDinero == 1) {ganasDineroPuntos = 3}
+    if(ganasDinero == 2) {ganasDineroPuntos = 6}
+    if(ganasDinero == 3) {ganasDineroPuntos = 9}
+    if(ganasDinero == 4) {ganasDineroPuntos = 12}
+    if(ganasDinero == 5) {ganasDineroPuntos = 15}
+
+    if(estadistica == 1) {estadisticaPuntos = 5}
+    if(estadistica == 2) {estadisticaPuntos = 10}
+    if(estadistica == 3) {estadisticaPuntos = 15}
+    if(estadistica == 4) {estadisticaPuntos = 20}
+    if(estadistica == 5) {estadisticaPuntos = 25}
+
+    totalPuntos = pagWebPuntos + redesSocialesPuntos + communityPuntos + posicionamientoPuntos + ganasDineroPuntos + estadisticaPuntos;
+    document.resultadoDiagnositco.resultadoDiagnostico.value = totalPuntos;
+
+    return totalPuntos;
 }
-function valdiaGanadinero()
+function eligeAvengers (totalPuntos)
 {
-    var ganaDinero = document.getElementById('ganaDinero');
-    const resultadoGanadinero = "";
-    const i = 0;
-
-    for(i = 0; i < ganaDinero.length; i++)
-    {
-        if(ganaDinero[i].checked)
-        {
-            resultadoGanadinero = ganaDinero(i).value;            
-        }
-    }
-    document.resultadoDiagnositco.ganasDineroResultado.value = resultadoGanadinero;
+    if(totalPuntos > 0; totalPuntos <= 20) {document.resultadoDiagnositco.tuAvengers.value = "Spiderman"}
+    if(totalPuntos > 21; totalPuntos <= 40) {document.resultadoDiagnositco.tuAvengers.value = "Hulk"}
+    if(totalPuntos > 41; totalPuntos <= 60) {document.resultadoDiagnositco.tuAvengers.value = "Dr. Strange"}
+    if(totalPuntos > 61; totalPuntos <= 80) {document.resultadoDiagnositco.tuAvengers.value = "Thor"}
+    if(totalPuntos > 81; totalPuntos <= 100) {document.resultadoDiagnositco.tuAvengers.value = "Captain America"}
+    
 }
- 
-    
- /*  
-    var rates = document.getElementsByName('rate');
-    var rate_value;
-    for(var i = 0; i < rates.length; i++){
-        if(rates[i].checked){
-            rate_value = rates[i].value;
-        }
-    }
-
-
-
-    function getRadioButtonSelectedValue(ctrl)
-    {
-        for(i=0;i<ctrl.length;i++)
-            if(ctrl[i].checked) return ctrl[i].value;
-    }
-  
-  getRadioButtonSelectedValue(document.frmSO.so);.
-  */    
-    
-    /*
-    if (ingresoTotal > gastoTotal) {
-        console.log("Todavía Tiene Dinero");
-    } else{
-        console.log("Se Gastó Hasta lo que NO Tenía")
-    }
-    */
-
-
-
-
-
-
