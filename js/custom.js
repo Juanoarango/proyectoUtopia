@@ -1,4 +1,4 @@
-// NIVO LIGHTBOX
+//LIGHTBOX
 $('#portafolio a').nivoLightbox({
     effect: 'fadeScale',
 });
