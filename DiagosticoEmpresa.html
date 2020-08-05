@@ -84,82 +84,82 @@
                     <div class="col-lg-4 column_2">
                         <p><label for="paginaWeb">Tienes una página WEB?</label> </p>
                         <div class="inputsForm">
-                            <input class="checkbox-inline" name="web" type="radio" id="web">
-                            <label for="web">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="checkbox-inline" name="web" type="radio" id="webSi"  value = "Si">
+                            <label for="webSi">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
 
-                            <input class="checkbox-inline" name="web" type="radio" id="web">
-                            <label for="web">NO</label>
+                            <input class="checkbox-inline" name="web" type="radio" id="webNo"  value = "NO" validaWeb()>
+                            <label for="webNo">NO</label>
 
                             <p><label for="nameWeb">Si tienes ¿cual es la URL?</label></p>
-                            <input name="nameWeb" type="text" class="form-control" id="nameWeb" value='validaWeb()'>
+                            <input name="nameWeb" type="text" class="form-control" id="nameWeb">
                         </div>
-                        <p><label for="tusRedesSociales">Tus Redes Sociales</label></p>
+                        <p><label for="lbltusRedesSociales">Tus Redes Sociales</label></p>
                         <div class="inputsForm">
-                            <input name="tusRedesFacebook" type="checkbox" id="tusRedesFacebook" class="checkbox-inline">
+                            <input name="tusRedesSociales" type="checkbox" id="tusRedesFacebook" class="checkbox-inline" value = "1">
                             <a href="#" class="fa fa-facebook"></a>
                             <label for="tusRedesFacebook">Facebook</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="tusRedesTwitter" type="checkbox" id="tusRedesTwitter" class="checkbox-inline">
+                            <input name="tusRedesSociales" type="checkbox" id="tusRedesTwitter" class="checkbox-inline" value = "1">
                             <a href="#" class="fa fa-twitter"></a>
                             <label for="tusRedesTwitter">Twitter</label>&nbsp;&nbsp;
                             <div>
-                                <input name="tusRedesLinkedin" type="checkbox" id="tusRedesLinkedin" class="checkbox-inline">
+                                <input name="tusRedesSociales" type="checkbox" id="tusRedesLinkedin" class="checkbox-inline" value = "1">
                                 <a href="#" class="fa fa-linkedin"></a>
                                 <label for="tusRedesLinkedin">Linkedin</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input name="tusRedesInstagram" type="checkbox" id="tusRedesInstagram" class="checkbox-inline">
+                                <input name="tusRedesSociales" type="checkbox" id="tusRedesInstagram" class="checkbox-inline" value = "1">
                                 <a href="#" class="fa fa-instagram"></a>
                                 <label for="tusRedesInstagram">Instagram</label>
                             </div>
                             <p><label for="tusRedesOtras">Otra, Cual?</label></p>
-                            <input name="nameWeb" type="text" class="form-control" id="nameWeb">
+                            <input name="nameRedSocial" type="text" class="form-control" id="nameWeb">
                         </div>
                     </div>
 
                     <div class="col-lg-4 column_3">
                         <p><label for="communityManager">Tienes Community Manager para Administrar tus Redes?</label></p>
                         <div class="inputsForm">
-                            <input class="checkbox-inline" name="community" type="radio" id="community">
-                            <label for="community">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="checkbox-inline" name="community" type="radio" id="community">
-                            <label for="community">NO</label>
+                            <input class="checkbox-inline" name="community" type="radio" id="communitySi"  value = "SI">
+                            <label for="communitySi">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="checkbox-inline" name="community" type="radio" id="communityNo" value = "NO">
+                            <label for="communityNo">NO</label>
                         </div>
                         <p><label for="usasPosicionador">Usas / Pagas algún posicionador para tu Sitio WEB?</label></p>
                         <div class="inputsForm">
-                            <input name="usasPosicionador" type="radio" id="usasPosicionador" class="checkbox-inline">
-                            <label for="usasPosicionador">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="usasPosicionador" type="radio" id="usasPosicionador" class="checkbox-inline">
-                            <label for="usasPosicionador">NO</label>
+                            <input name="usasPosicionador" type="radio" id="usasPosicionadorSi" class="checkbox-inline"  value = "SI">
+                            <label for="usasPosicionadorSi">SI</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="usasPosicionador" type="radio" id="usasPosicionadorNo" class="checkbox-inline" value = "NO">
+                            <label for="usasPosicionadorNo">NO</label>
                         </div>
                         <p style="color: #337ab7; text-align: center;">De las Siguientes Opciones califica de 1 a 5, Donde 1 revela Insatisfacción y 5 Satisfacción Total</p>
                         <p><label for="ingresoMarketing">Tu Emrpesa Gana Dinero Gracias al Marketing?</label></p>
                         <div class="inputsForm">
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="ganasDinero" type="radio" id="ganasDinero" class="checkbox-inline">
-                            <label for="ganasDinero">5</label>
+                            <input name="ganasDinero" type="radio" id="ganasDineroUno" class="checkbox-inline" value = "1">
+                            <label for="ganasDineroUno">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="ganasDinero" type="radio" id="ganasDineroDos" class="checkbox-inline" value = "2">
+                            <label for="ganasDineroDos">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="ganasDinero" type="radio" id="ganasDineroTres" class="checkbox-inline" value = "3">
+                            <label for="ganasDineroTres">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="ganasDinero" type="radio" id="ganasDineroCuatro" class="checkbox-inline" value = "4">
+                            <label for="ganasDineroCuatro">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="ganasDinero" type="radio" id="ganasDineroCinco" class="checkbox-inline" value = "5">
+                            <label for="ganasDineroCinco">5</label>
                         </div>
                         <p><label for="estadisticas">Tienes Datos Estadísticos de las Visitas a Tu Página o lo que Buscan tus Visitantes?</label></p>
                         <div class="inputsForm">
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticas" class="checkbox-inline">
-                            <label for="tienesEstadisticas">5</label>
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasUno" class="checkbox-inline" value = "1">
+                            <label for="tienesEstadisticasUno">1</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasDos" class="checkbox-inline" value = "2">
+                            <label for="tienesEstadisticasDos">2</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasTres" class="checkbox-inline" value = "3">
+                            <label for="tienesEstadisticasTres">3</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasCuatro" class="checkbox-inline" value = "4">
+                            <label for="tienesEstadisticasCuatro">4</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="tienesEstadisticas" type="radio" id="tienesEstadisticasCinco" class="checkbox-inline" value = "5">
+                            <label for="tienesEstadisticasCinco">5</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <button type="button" name="btnEnviarDiagnostico" value="enviar" onclick="enviarDiagnostico(), valdiaGanadinero()" class="btn btn-default">ENVIAR</button>
+                            <button type="button" name="btnEnviarDiagnostico" id="btnEnviarDiagnostico"  value="enviar" onclick="enviarDiagnostico(), puntajeDiagnostico(), eligeAvengers()" class="btn btn-default">ENVIAR</button>
                         </div>
                     </div>
                 </form>
@@ -188,10 +188,39 @@
                                 <input name="emailEmpresaResultado" type="email" class="form-control" id="emailEmpresaResultado">
                             </div>
                             <div class="col-lg-4 column_2">
+                                <label for="tienesWebResultado">Página WEB</label>
+                                <input name="tienesWebResultado" type="text" class="form-control" id="tienesWebResultado">
+
+                                <label for="redesSocialesResultado">Redes Sociales</label>
+                                <input name="redesSocialesResultado" type="text" class="form-control" id="redesSocialesResultado">
+
+                                <label for="communityResultado">Community Manager</label>
+                                <input name="communityResultado" type="text" class="form-control" id="communityResultado">
+
+                                <label for="posicionamientoResultado">Posicionamiento</label>
+                                <input name="posicionamientoResultado" type="text" class="form-control" id="posicionamientoResultado">
+                                
                                 <label for="ganasDineroResultado">Ganas Dinero Gracias al Marketing</label>
                                 <input name="ganasDineroResultado" type="text" class="form-control" id="ganasDineroResultado">
-                            </div>
 
+                                <label for="tienesEstadisticasResultado">Ganas Dinero Gracias al Marketing</label>
+                                <input name="tienesEstadisticasResultado" type="text" class="form-control" id="tienesEstadisticasResultado">
+                            </div>
+                            <!-- Elije Avenger-->
+                            <div class="col-lg-4 column_3">
+                                    <label for="resultadoDiagnostico">Aquí Tienes el Resultado del Diagnóstico</label>
+                                    <input name="resultadoDiagnostico" type="text" class="form-control" id="resultadoDiagnostico">
+    
+                                    <label for="tuAvengers">Tu Personaje</label>
+                                    <input name="tuAvengers" type="text" class="form-control" id="tuAvengers">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center">
+                                            <button type="button" name="btnMostrarAvenger" id="btnMostrarAvenger"  value="enviarAvenger" class="btn btn-default">Avenger</button>
+                                        </div>
+                                    </div>
+                                </div>                                    
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -269,7 +298,7 @@
     <script src="js/lightbox.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/js.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>    
 </body>
 
 </html>
