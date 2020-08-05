@@ -165,21 +165,6 @@ $.ajax({
     console.log(respuesta);
 });
 
-//btnMostrarAvenger
-/*
-$(document).ready(function () {
-    $("#btnEnviarDiagnostico").on('click', function () {
-        var $radios = $('input[name="tienesEstadisticas"]'); 
-        $radios.each(function () {
-            if ($(this).prop('checked')) {
-                console.log('El radio seleccionado es: ' + $(this).val());
-                resultadoEstadisticas = $(this).val();
-                document.resultadoDiagnositco.tienesEstadisticasResultado.value = resultadoEstadisticas;
-            }
-        })
-    })
-});
-*/
 
 /*
 $.ajax({
