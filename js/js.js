@@ -8,11 +8,11 @@ function enviarDiagnostico()
     const numeroCelular = document.getElementById('numeroCelular').value;
     const emailEmpresa = document.getElementById('emailEmpresa').value;
 
-    document.resultadoDiagnositco.nitEmpresaResultado.value = nitEmpresa;
-    document.resultadoDiagnositco.nameEmpresaResultado.value = nameEmpresa;
-    document.resultadoDiagnositco.nameContactoResultado.value = nameContacto;
-    document.resultadoDiagnositco.numeroCelularResultado.value = numeroCelular;
-    document.resultadoDiagnositco.emailEmpresaResultado.value = emailEmpresa;   
+    document.dibResultadoDiagnositco.nitEmpresaResultado.value = nitEmpresa;
+    document.divResultadoDiagnositco.nameEmpresaResultado.value = nameEmpresa;
+    document.divResultadoDiagnositco.nameContactoResultado.value = nameContacto;
+    document.divResultadoDiagnositco.numeroCelularResultado.value = numeroCelular;
+    document.divResultadoDiagnositco.emailEmpresaResultado.value = emailEmpresa;   
 }
 
 // Funciónes para conocer que Radio fué seleccionado
@@ -23,9 +23,9 @@ $(document).ready(function () {
         var $radios = $('input[name="web"]'); 
         $radios.each(function () {
             if ($(this).prop('checked')) {
-                console.log('El radio seleccionado es: ' + $(this).val());
+                //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoWeb = $(this).val();
-                document.resultadoDiagnositco.tienesWebResultado.value = resultadoWeb;
+                document.divResultadoDiagnositco.tienesWebResultado.value = resultadoWeb;
             }
         })
     })
@@ -37,9 +37,9 @@ $(document).ready(function () {
         var $radios = $('input[name="tusRedesSociales"]'); 
         $radios.each(function () {
             if ($(this).prop('checked')) {
-                console.log('El radio seleccionado es: ' + $(this).val());
+                //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoRedes = $(this).val();
-                document.resultadoDiagnositco.redesSocialesResultado.value = resultadoRedes;
+                document.divResultadoDiagnositco.redesSocialesResultado.value = resultadoRedes;
             }
         })
     })
@@ -50,9 +50,9 @@ $(document).ready(function () {
         var $radios = $('input[name="community"]'); 
         $radios.each(function () {
             if ($(this).prop('checked')) {
-                console.log('El radio seleccionado es: ' + $(this).val());
+                //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoCommunity = $(this).val();
-                document.resultadoDiagnositco.communityResultado.value = resultadoCommunity;
+                document.divResultadoDiagnositco.communityResultado.value = resultadoCommunity;
             }
         })
     })
@@ -63,9 +63,9 @@ $(document).ready(function () {
         var $radios = $('input[name="usasPosicionador"]'); 
         $radios.each(function () {
             if ($(this).prop('checked')) {
-                console.log('El radio seleccionado es: ' + $(this).val());
+                //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoPosicionador = $(this).val();
-                document.resultadoDiagnositco.posicionamientoResultado.value = resultadoPosicionador;
+                document.divResultadoDiagnositco.posicionamientoResultado.value = resultadoPosicionador;
             }
         })
     })
@@ -76,9 +76,9 @@ $(document).ready(function () {
         var $radios = $('input[name="ganasDinero"]'); 
         $radios.each(function () {
             if ($(this).prop('checked')) {
-                console.log('El radio seleccionado es: ' + $(this).val());
+                //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoGanadinero = $(this).val();
-                document.resultadoDiagnositco.ganasDineroResultado.value = resultadoGanadinero;
+                document.divResultadoDiagnositco.ganasDineroResultado.value = resultadoGanadinero;
             }
         })
     })
@@ -89,14 +89,14 @@ $(document).ready(function () {
         var $radios = $('input[name="tienesEstadisticas"]'); 
         $radios.each(function () {
             if ($(this).prop('checked')) {
-                console.log('El radio seleccionado es: ' + $(this).val());
+                //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoEstadisticas = $(this).val();
-                document.resultadoDiagnositco.tienesEstadisticasResultado.value = resultadoEstadisticas;
+                document.divResultadoDiagnositco.tienesEstadisticasResultado.value = resultadoEstadisticas;
             }
         })
     })
 });
-
+//$('#miCampo').val('mi valor');
 function puntajeDiagnostico()
 {
     const pagWeb = document.getElementById('tienesWebResultado').value;
@@ -114,56 +114,99 @@ function puntajeDiagnostico()
     let estadisticaPuntos = 0;
     let totalPuntos = 0;
 
-    if(pagWeb == "SI") {pagWebPuntos == 20}
+    if(pagWeb == "SI") {pagWebPuntos = 20; totalPuntos = totalPuntos + 20}
 
-    if(redesSociales == 1) {redesSocialesPuntos = 2}
-    if(redesSociales == 2) {redesSocialesPuntos = 4}
-    if(redesSociales == 3) {redesSocialesPuntos = 6}
-    if(redesSociales == 4) {redesSocialesPuntos = 8}
-    if(redesSociales == 5) {redesSocialesPuntos = 10}
+    if(redesSociales == 1) {redesSocialesPuntos = 2; totalPuntos = totalPuntos + 2}
+    if(redesSociales == 2) {redesSocialesPuntos = 4; totalPuntos = totalPuntos + 4}
+    if(redesSociales == 3) {redesSocialesPuntos = 6; totalPuntos = totalPuntos + 6}
+    if(redesSociales == 4) {redesSocialesPuntos = 8; totalPuntos = totalPuntos + 8}
+    if(redesSociales == 5) {redesSocialesPuntos = 10; totalPuntos = totalPuntos + 10}
     
-    if(community == "SI") {communityPuntos = 20}
+    if(community == "SI") {communityPuntos = 20; totalPuntos = totalPuntos + 20}
 
-    if(posicionamiento == "SI") {posicionamientoPuntos = 10}
+    if(posicionamiento == "SI") {posicionamientoPuntos = 10; totalPuntos = totalPuntos + 10}
 
-    if(ganasDinero == 1) {ganasDineroPuntos = 3}
-    if(ganasDinero == 2) {ganasDineroPuntos = 6}
-    if(ganasDinero == 3) {ganasDineroPuntos = 9}
-    if(ganasDinero == 4) {ganasDineroPuntos = 12}
-    if(ganasDinero == 5) {ganasDineroPuntos = 15}
+    if(ganasDinero == 1) {ganasDineroPuntos = 3; totalPuntos = totalPuntos + 3}
+    if(ganasDinero == 2) {ganasDineroPuntos = 6; totalPuntos = totalPuntos + 6}
+    if(ganasDinero == 3) {ganasDineroPuntos = 9; totalPuntos = totalPuntos + 9}
+    if(ganasDinero == 4) {ganasDineroPuntos = 12; totalPuntos = totalPuntos + 12}
+    if(ganasDinero == 5) {ganasDineroPuntos = 15; totalPuntos = totalPuntos + 15}
 
-    if(estadistica == 1) {estadisticaPuntos = 5}
-    if(estadistica == 2) {estadisticaPuntos = 10}
-    if(estadistica == 3) {estadisticaPuntos = 15}
-    if(estadistica == 4) {estadisticaPuntos = 20}
-    if(estadistica == 5) {estadisticaPuntos = 25}
+    if(estadistica == 1) {estadisticaPuntos = 5; totalPuntos = totalPuntos + 5}
+    if(estadistica == 2) {estadisticaPuntos = 10; totalPuntos = totalPuntos + 10}
+    if(estadistica == 3) {estadisticaPuntos = 15; totalPuntos = totalPuntos + 15}
+    if(estadistica == 4) {estadisticaPuntos = 20; totalPuntos = totalPuntos + 20}
+    if(estadistica == 5) {estadisticaPuntos = 25; totalPuntos = totalPuntos + 25}
 
     totalPuntos = pagWebPuntos + redesSocialesPuntos + communityPuntos + posicionamientoPuntos + ganasDineroPuntos + estadisticaPuntos;
-    document.resultadoDiagnositco.resultadoDiagnostico.value = totalPuntos;
+    console.log(totalPuntos)
 
+    document.getElementById("resultadoDiagnositco").value //= totalPuntos = pagWebPuntos + redesSocialesPuntos + communityPuntos + posicionamientoPuntos + ganasDineroPuntos + estadisticaPuntos;
+
+        
     return totalPuntos;
 }
 function eligeAvengers (totalPuntos)
 {
-    if(totalPuntos > 0 && totalPuntos <= 20) {document.resultadoDiagnositco.tuAvengers.value = "Spiderman"}
-    if(totalPuntos > 21 && totalPuntos <= 40) {document.resultadoDiagnositco.tuAvengers.value = "Hulk"}
-    if(totalPuntos > 41 && totalPuntos <= 60) {document.resultadoDiagnositco.tuAvengers.value = "Dr. Strange"}
-    if(totalPuntos > 61 && totalPuntos <= 80) {document.resultadoDiagnositco.tuAvengers.value = "Thor"}
-    if(totalPuntos > 81 && totalPuntos <= 100) {document.resultadoDiagnositco.tuAvengers.value = "Captain America"}
+    if(totalPuntos > 0 && totalPuntos <= 20) {document.divResultadoDiagnositco.tuAvengers.value = "Spiderman"}
+    if(totalPuntos > 21 && totalPuntos <= 40) {document.divResultadoDiagnositco.tuAvengers.value = "Hulk"}
+    if(totalPuntos > 41 && totalPuntos <= 60) {document.divResultadoDiagnositco.tuAvengers.value = "Dr. Strange"}
+    if(totalPuntos > 61 && totalPuntos <= 80) {document.divResultadoDiagnositco.tuAvengers.value = "Thor"}
+    if(totalPuntos > 81 && totalPuntos <= 100) {document.divResultadoDiagnositco.tuAvengers.value = "Captain America"}
     
 }
 // API
-// Public Key 	99ff19dd15acb9ab9183ef75ab5808c3
+// Public Key 	199ff19dd15acb9ab9183ef75ab5808c3
 // Private Key 	9b9c695a749380d31b96177a8c81f01f880e564b
+// Concatenar para Hash 99b9c695a749380d31b96177a8c81f01f880e564b99ff19dd15acb9ab9183ef75ab5808c3
+// Hash con 1: 795AC35E3288EC4B0280B1D0B154FF09
+// Hash con 9: BB0B841A12249E09FEBCFEE87397E938
+// hash con publica: F48EFF5056C9162C1AD184639EE65F9E
+// hash con 1, pubica, privada: BE4F1C4A1977858553A7CB2341092696
+
+
+//99ff19dd15acb9ab9183ef75ab5808c3
+//9b9c695a749380d31b96177a8c81f01f880e564b
+
+//http://gateway.marvel.com/v1/public/characters?apikey=c820e1a0&ts=9&hash=fdde64d1cb96ffad1ae414e0af18b1f0&name=iron man
+
 var avengers = ""
 avengers = document.getElementById('tuAvengers').value;
 
 $.ajax({
-    url: 'https://gateway.marvel.com:443/v1/public/characters?orderBy=name&avengers.value&apikey=9b9c695a749380d31b96177a8c81f01f880e564b',
-    method:'GET'
+   // const ts = Date.now(),
+    
+   //url: `https://cors-anywhere.herokuapp.com/http://gateway.marvel.com/v1/public/characters?ts=1&apikey=d807331cdbf39818935beaaf61d8ebe9&hash=${hash}`,
+    //url: 'https://gateway.marvel.com:443/v1/public/characters?f19dd15acb9apikey=99fab9183ef75ab5808c3&ts=9&hash=BB0B841A12249E09FEBCFEE87397E938&orderBy=name',
+    //url: 'https://gateway.marvel.com:443/v1/public/characters?orderBy=name&apikey=99ff19dd15acb9ab9183ef75ab5808c3',
+    
+    method:'GET',
+
+    beforeSend: function(request) {
+        request.setRequestHeader("Origin", 'https://localhost');
+    },
+    url: 'https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=99ff19dd15acb9ab9183ef75ab5808c3&hash=BE4F1C4A1977858553A7CB2341092696',
+
+    
 }).done(function(respuesta){
     console.log(respuesta);
 });
+
+// Video API Marvel
+/*
+const marvel
+{
+    render:() =>
+    {
+        const urlAPI '';
+        const container document.querySelector(#marvel-row);
+        let contentHTML "";
+        
+
+    }
+}
+*/
+
 
 
 /*
