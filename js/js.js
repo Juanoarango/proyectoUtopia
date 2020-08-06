@@ -177,3 +177,6 @@ function traeImagen()
     })
 });
 }
+
+// Funciones para programar el Carrito de Compras
+
