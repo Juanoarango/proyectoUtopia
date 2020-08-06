@@ -153,70 +153,27 @@ function puntajeDiagnostico()
     if(totalPuntos > 41 && totalPuntos <= 60) {document.frmResultadoDiagnostico.tuAvengers.value = "Dr. Strange"}
     if(totalPuntos > 61 && totalPuntos <= 80) {document.frmResultadoDiagnostico.tuAvengers.value = "Thor"}
     if(totalPuntos > 81 && totalPuntos <= 100) {document.frmResultadoDiagnostico.tuAvengers.value = "Captain America"}
-    
-    console.log(tuAvengers);
 }
-
-
 // API
 // Public Key 	199ff19dd15acb9ab9183ef75ab5808c3
 // Private Key 	9b9c695a749380d31b96177a8c81f01f880e564b
-// Concatenar para Hash 99b9c695a749380d31b96177a8c81f01f880e564b99ff19dd15acb9ab9183ef75ab5808c3
-// Hash con 1: 795AC35E3288EC4B0280B1D0B154FF09
-// Hash con 9: BB0B841A12249E09FEBCFEE87397E938
-// hash con publica: F48EFF5056C9162C1AD184639EE65F9E
-// hash con 1, pubica, privada: BE4F1C4A1977858553A7CB2341092696
+// Concatenar para Hash 19b9c695a749380d31b96177a8c81f01f880e564b99ff19dd15acb9ab9183ef75ab5808c3
 
-
-//99ff19dd15acb9ab9183ef75ab5808c3
-//9b9c695a749380d31b96177a8c81f01f880e564b
-
-//http://gateway.marvel.com/v1/public/characters?apikey=c820e1a0&ts=9&hash=fdde64d1cb96ffad1ae414e0af18b1f0&name=iron man
-
-var avengers = ""
-avengers = document.getElementById('tuAvengers').value;
-
-$.ajax({
-   // const ts = Date.now(),
-    
-   //url: `https://cors-anywhere.herokuapp.com/http://gateway.marvel.com/v1/public/characters?ts=1&apikey=d807331cdbf39818935beaaf61d8ebe9&hash=${hash}`,
-    //url: 'https://gateway.marvel.com:443/v1/public/characters?f19dd15acb9apikey=99fab9183ef75ab5808c3&ts=9&hash=BB0B841A12249E09FEBCFEE87397E938&orderBy=name',
-    //url: 'https://gateway.marvel.com:443/v1/public/characters?orderBy=name&apikey=99ff19dd15acb9ab9183ef75ab5808c3',
-    
-    method:'GET',
-
-    beforeSend: function(request) {
-        request.setRequestHeader("Origin", 'https://localhost');
-    },
-    url: 'https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=99ff19dd15acb9ab9183ef75ab5808c3&hash=BE4F1C4A1977858553A7CB2341092696',
-
-    
-}).done(function(respuesta){
-    console.log(respuesta);
-});
-
-// Video API Marvel
-/*
-const marvel
+function traeImagen()
 {
-    render:() =>
-    {
-        const urlAPI '';
-        const container document.querySelector(#marvel-row);
-        let contentHTML "";
+    var imgAvengers = ""
+    imgAavengers = document.getElementById('tuAvengers').value;
+
+    $.ajax({
+        url: 'https://gateway.marvel.com:443/v1/public/characters?nameStartsWith='+imgAavengers+'&orderBy=name&apikey=99ff19dd15acb9ab9183ef75ab5808c3&ts=1&hash=795ac35e3288ec4b0280b1d0b154ff09',
+    
+        method:'GET',
+    
         
-
-    }
-}
-*/
-
-
-
-/*
-$.ajax({
-    url: 'https://gateway.marvel.com:443/v1/public/characters?orderBy=name&apikey=72bbed3a19c397fb81602b0065e8684c',
-    method:'GET'
-}).done(function(respuesta){
-    console.log(respuesta);
+    }).done(function(response){
+    $('.img-responsive').attr({
+        'src':
+        response.data.results[0].thumbnail.path + '.' + response.data.results[0].thumbnail.extension
+    })
 });
-*/
+}
