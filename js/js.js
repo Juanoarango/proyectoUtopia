@@ -8,11 +8,11 @@ function enviarDiagnostico()
     const numeroCelular = document.getElementById('numeroCelular').value;
     const emailEmpresa = document.getElementById('emailEmpresa').value;
 
-    document.dibResultadoDiagnositco.nitEmpresaResultado.value = nitEmpresa;
-    document.divResultadoDiagnositco.nameEmpresaResultado.value = nameEmpresa;
-    document.divResultadoDiagnositco.nameContactoResultado.value = nameContacto;
-    document.divResultadoDiagnositco.numeroCelularResultado.value = numeroCelular;
-    document.divResultadoDiagnositco.emailEmpresaResultado.value = emailEmpresa;   
+    document.frmResultadoDiagnostico.nitEmpresaResultado.value = nitEmpresa;
+    document.frmResultadoDiagnostico.nameEmpresaResultado.value = nameEmpresa;
+    document.frmResultadoDiagnostico.nameContactoResultado.value = nameContacto;
+    document.frmResultadoDiagnostico.numeroCelularResultado.value = numeroCelular;
+    document.frmResultadoDiagnostico.emailEmpresaResultado.value = emailEmpresa;   
 }
 
 // Funciónes para conocer que Radio fué seleccionado
@@ -25,7 +25,7 @@ $(document).ready(function () {
             if ($(this).prop('checked')) {
                 //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoWeb = $(this).val();
-                document.divResultadoDiagnositco.tienesWebResultado.value = resultadoWeb;
+                document.frmResultadoDiagnostico.tienesWebResultado.value = resultadoWeb;
             }
         })
     })
@@ -39,7 +39,7 @@ $(document).ready(function () {
             if ($(this).prop('checked')) {
                 //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoRedes = $(this).val();
-                document.divResultadoDiagnositco.redesSocialesResultado.value = resultadoRedes;
+                document.frmResultadoDiagnostico.redesSocialesResultado.value = resultadoRedes;
             }
         })
     })
@@ -52,7 +52,7 @@ $(document).ready(function () {
             if ($(this).prop('checked')) {
                 //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoCommunity = $(this).val();
-                document.divResultadoDiagnositco.communityResultado.value = resultadoCommunity;
+                document.frmResultadoDiagnostico.communityResultado.value = resultadoCommunity;
             }
         })
     })
@@ -65,7 +65,7 @@ $(document).ready(function () {
             if ($(this).prop('checked')) {
                 //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoPosicionador = $(this).val();
-                document.divResultadoDiagnositco.posicionamientoResultado.value = resultadoPosicionador;
+                document.frmResultadoDiagnostico.posicionamientoResultado.value = resultadoPosicionador;
             }
         })
     })
@@ -78,7 +78,7 @@ $(document).ready(function () {
             if ($(this).prop('checked')) {
                 //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoGanadinero = $(this).val();
-                document.divResultadoDiagnositco.ganasDineroResultado.value = resultadoGanadinero;
+                document.frmResultadoDiagnostico.ganasDineroResultado.value = resultadoGanadinero;
             }
         })
     })
@@ -91,12 +91,13 @@ $(document).ready(function () {
             if ($(this).prop('checked')) {
                 //console.log('El radio seleccionado es: ' + $(this).val());
                 resultadoEstadisticas = $(this).val();
-                document.divResultadoDiagnositco.tienesEstadisticasResultado.value = resultadoEstadisticas;
+                document.frmResultadoDiagnostico.tienesEstadisticasResultado.value = resultadoEstadisticas;
             }
         })
     })
 });
 //$('#miCampo').val('mi valor');
+
 function puntajeDiagnostico()
 {
     const pagWeb = document.getElementById('tienesWebResultado').value;
@@ -112,7 +113,7 @@ function puntajeDiagnostico()
     let posicionamientoPuntos = 0;
     let ganasDineroPuntos = 0;
     let estadisticaPuntos = 0;
-    let totalPuntos = 0;
+    var totalPuntos = 0;    
 
     if(pagWeb == "SI") {pagWebPuntos = 20; totalPuntos = totalPuntos + 20}
 
@@ -139,22 +140,24 @@ function puntajeDiagnostico()
     if(estadistica == 5) {estadisticaPuntos = 25; totalPuntos = totalPuntos + 25}
 
     totalPuntos = pagWebPuntos + redesSocialesPuntos + communityPuntos + posicionamientoPuntos + ganasDineroPuntos + estadisticaPuntos;
-    console.log(totalPuntos)
-
-    document.getElementById("resultadoDiagnositco").value //= totalPuntos = pagWebPuntos + redesSocialesPuntos + communityPuntos + posicionamientoPuntos + ganasDineroPuntos + estadisticaPuntos;
-
+    console.log(totalPuntos);
         
-    return totalPuntos;
-}
-function eligeAvengers (totalPuntos)
-{
-    if(totalPuntos > 0 && totalPuntos <= 20) {document.divResultadoDiagnositco.tuAvengers.value = "Spiderman"}
-    if(totalPuntos > 21 && totalPuntos <= 40) {document.divResultadoDiagnositco.tuAvengers.value = "Hulk"}
-    if(totalPuntos > 41 && totalPuntos <= 60) {document.divResultadoDiagnositco.tuAvengers.value = "Dr. Strange"}
-    if(totalPuntos > 61 && totalPuntos <= 80) {document.divResultadoDiagnositco.tuAvengers.value = "Thor"}
-    if(totalPuntos > 81 && totalPuntos <= 100) {document.divResultadoDiagnositco.tuAvengers.value = "Captain America"}
+    document.frmResultadoDiagnostico.resultadoDiagnostico.value = totalPuntos;
+
+//    return totalPuntos.value;
+//}
+//function eligeAvengers (totalPuntos)
+//{
+    if(totalPuntos > 0 && totalPuntos <= 20) {document.frmResultadoDiagnostico.tuAvengers.value = "Spiderman"}
+    if(totalPuntos > 21 && totalPuntos <= 40) {document.frmResultadoDiagnostico.tuAvengers.value = "Hulk"}
+    if(totalPuntos > 41 && totalPuntos <= 60) {document.frmResultadoDiagnostico.tuAvengers.value = "Dr. Strange"}
+    if(totalPuntos > 61 && totalPuntos <= 80) {document.frmResultadoDiagnostico.tuAvengers.value = "Thor"}
+    if(totalPuntos > 81 && totalPuntos <= 100) {document.frmResultadoDiagnostico.tuAvengers.value = "Captain America"}
     
+    console.log(tuAvengers);
 }
+
+
 // API
 // Public Key 	199ff19dd15acb9ab9183ef75ab5808c3
 // Private Key 	9b9c695a749380d31b96177a8c81f01f880e564b
