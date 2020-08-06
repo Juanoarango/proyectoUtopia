@@ -148,7 +148,7 @@ function puntajeDiagnostico()
 //}
 //function eligeAvengers (totalPuntos)
 //{
-    if(totalPuntos > 0 && totalPuntos <= 20) {document.frmResultadoDiagnostico.tuAvengers.value = "Spiderman"}
+    if(totalPuntos > 0 && totalPuntos <= 20) {document.frmResultadoDiagnostico.tuAvengers.value = "Spider-Man"}
     if(totalPuntos > 21 && totalPuntos <= 40) {document.frmResultadoDiagnostico.tuAvengers.value = "Hulk"}
     if(totalPuntos > 41 && totalPuntos <= 60) {document.frmResultadoDiagnostico.tuAvengers.value = "Dr. Strange"}
     if(totalPuntos > 61 && totalPuntos <= 80) {document.frmResultadoDiagnostico.tuAvengers.value = "Thor"}
